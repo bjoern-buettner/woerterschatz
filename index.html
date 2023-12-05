@@ -74,7 +74,7 @@
                         document.getElementById('input').removeAttribute('style');
                         document.getElementsByTagName('legend')[1].innerText = data.question;
                         document.getElementsByTagName('input')[3].onchange = () => {
-                            data.answer === document.getElementsByTagName('input')[3].value ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
+                            data.answer === document.getElementsByTagName('input')[3].value ? window.alert('Richtig!') : window.alert(data.answer);
                             fill();
                             document.getElementsByTagName('input')[3].value = '';
                         };
