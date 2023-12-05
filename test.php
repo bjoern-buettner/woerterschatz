@@ -4,7 +4,7 @@ use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$words = Yaml::parseFile(__DIR__ . '/vacabulary.yaml');
+$words = Yaml::parseFile(__DIR__ . '/vocabulary.yaml');
 
 $types = array_keys($words);
 shuffle($types);
