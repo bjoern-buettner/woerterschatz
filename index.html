@@ -71,10 +71,10 @@
                             document.getElementsByTagName('input')[2].checked = false;
                         };
                     } else if (data.type === 'input') {
-                        document.getElementById('multiple-choice').removeAttribute('style');
+                        document.getElementById('input').removeAttribute('style');
                         document.getElementsByTagName('legend')[1].innerText = data.question;
-                        document.getElementsByTagName('input')[4].onchange = () => {
-                            data.answer === document.getElementsByTagName('input')[4].value ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
+                        document.getElementsByTagName('input')[3].onchange = () => {
+                            data.answer === document.getElementsByTagName('input')[3].value ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
                             fill();
                             document.getElementsByTagName('input')[0].value = '';
                         };
