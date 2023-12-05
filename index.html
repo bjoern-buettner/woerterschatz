@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Wörterschatz</title>
-</head>
-<body>
-    <form>
-        <fieldset>
-            <legend></legend>
-            <div>
-                <label for="case1"></label>
-                <input id="case1" type="checkbox"/>
-            </div>
-            <div>
-                <label for="case2"></label>
-                <input id="case2" type="checkbox"/>
-            </div>
-            <div>
-                <label for="case3"></label>
-                <input id="case3" type="checkbox"/>
-            </div>
-        </fieldset>
-    </form>
-    <script>
-        (() => {
-            const fill = async () => {
-                const data = await fetch('/test.php');
-                document.getElementsByTagName('legend')[0].innerText = data.question;
-                document.getElementsByTagName('label')[0].innerText = data.answers[0];
-                document.getElementsByTagName('label')[1].innerText = data.answers[1];
-                document.getElementsByTagName('label')[2].innerText = data.answers[2];
-                document.getElementsByTagName('input')[0].onchange = () => {
-                    data.answer === 0 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
-                    fill();
+    <head>
+        <meta charset="UTF-8">
+        <title>Wörterschatz</title>
+        <style>
+            div {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                border-bottom: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div>
+                    <label for="case1"></label>
+                    <input id="case1" type="checkbox"/>
+                </div>
+                <div>
+                    <label for="case2"></label>
+                    <input id="case2" type="checkbox"/>
+                </div>
+                <div>
+                    <label for="case3"></label>
+                    <input id="case3" type="checkbox"/>
+                </div>
+            </fieldset>
+        </form>
+        <script>
+            (() => {
+                const fill = async () => {
+                    const data = await (await fetch('/test.php')).json();
+                    document.getElementsByTagName('legend')[0].innerText = data.question;
+                    document.getElementsByTagName('label')[0].innerText = data.answers[0];
+                    document.getElementsByTagName('label')[1].innerText = data.answers[1];
+                    document.getElementsByTagName('label')[2].innerText = data.answers[2];
+                    document.getElementsByTagName('input')[0].onchange = () => {
+                        data.answer === 0 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
+                        fill();
+                        document.getElementsByTagName('input')[0].checked = false;
+                    };
+                    document.getElementsByTagName('input')[1].onchange = () => {
+                        data.answer === 1 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
+                        fill();
+                        document.getElementsByTagName('input')[1].checked = false;
+                    };
+                    document.getElementsByTagName('input')[2].onchange = () => {
+                        data.answer === 2 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
+                        fill();
+                        document.getElementsByTagName('input')[2].checked = false;
+                    };
                 };
-                document.getElementsByTagName('input')[1].onchange = () => {
-                    data.answer === 1 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
-                    fill();
-                };
-                document.getElementsByTagName('input')[2].onchange = () => {
-                    data.answer === 3 ? window.alert('Richtig!') : window.alert(data.answers[data.answer]);
-                    fill();
-                };
-            };
-            fill();
-        })();
-    </script>
-</body>
+                fill();
+            })();
+        </script>
+    </body>
 </html>
