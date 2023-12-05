@@ -1,0 +1,8 @@
+{
+  "name". "bjoern-buettner/woerterschatz",
+  "requires": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "symfony/yaml": "^6.4"
+  }
+}
