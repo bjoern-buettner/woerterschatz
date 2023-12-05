@@ -1,6 +1,6 @@
 {
   "name": "bjoern-buettner/woerterschatz",
-  "requires": {
+  "require": {
     "php": "^8.1",
     "ext-json": "*",
     "symfony/yaml": "^6.4"
