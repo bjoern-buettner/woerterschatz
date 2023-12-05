@@ -14,7 +14,7 @@ $keys = array_keys($words[$type]);
 shuffle($keys);
 
 header('Mime-Type: application/json; utf-8');
-if (rand(0, 1) === 1) {
+if (rand(0, 1) === 1 && count ($keys) >= 3) {
     $question = array_pop($keys);
     $wrong1 = array_pop($keys);
     $wrong2 = array_pop($keys);

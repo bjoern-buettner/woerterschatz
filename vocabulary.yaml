@@ -5,10 +5,10 @@ verbs:
     - sich um etwas, besonders eine Stellung o. Ä., bemühen
     - Werbung für etwas treiben
     - die Gunst von jemandem zu erringen suchen
-#adverbs:
-#    bereits:
-#    - schon
-#    - fast, nahezu, so gut wie
+adverbs:
+    bereits:
+    - schon
+    - fast, nahezu, so gut wie
 adjectives:
     alternativ:
     - zwischen zwei Möglichkeiten die Wahl lassend; eine andere, zweite Möglichkeit darstellend
@@ -59,7 +59,7 @@ nouns:
     - Entschlusskraft; Unternehmungsgeist
     - Fähigkeit, aus eigenem Antrieb zu handeln
     - Zusammenschluss von Bürgerinnen und Bürgern, Verbänden, Vereinen, Firmen und/oder öffentlichen Einrichtungen zur Erreichung eines gemeinsamen [größer angelegten] Ziels
-    - [Recht auf] das Einbringen von Gesetzesvorlagen
+    - "[Recht auf] das Einbringen von Gesetzesvorlagen"
     - Begehren nach Erlass, Änderung oder Aufhebung eines Gesetzes oder Verfassungsartikels per Volksentscheid
     Koalition: (zum Zweck der Durchsetzung gemeinsamer Ziele geschlossenes) Bündnis besonders von politischen Parteien
     Besprechung:
