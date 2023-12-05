@@ -75,7 +75,7 @@ shuffle($answers);
 header('Mime-Type: application/json; utf-8');
 echo json_encode([
     'answer' => array_search($question, $answers),
-    'answers' => array_map(function (string $key) use(&$ytpe, &$words) {
+    'answers' => array_map(function (string $key) use(&$type, &$words) {
         if (is_array($words[$type][$key])) {
             shuffle($words[$type][$key]);
             return $words[$type][$key][0];
