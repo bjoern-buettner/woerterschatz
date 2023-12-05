@@ -56,7 +56,7 @@ $words = [
         'Start-up' => 'neu gegründetes Wirtschaftsunternehmen',
         'Hausordnung' => 'von dem Vermieter, der Vermieterin eines [Wohn]hauses, von der Leitung eines Heims o. Ä. erlassene Gesamtheit von Vorschriften für das Verhalten der Bewohner und Bewohnerinnen, Insassen und Insassinnen o. Ä., die die Benutzung bestimmter, zum Haus gehörender Einrichtungen betreffen',
     ]
-};
+];
 
 $types = array_keys($words);
 shuffle($types);
