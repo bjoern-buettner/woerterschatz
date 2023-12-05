@@ -2,6 +2,12 @@
 
 $words = [
     'nouns' => [
+        'Oxymoron' => 'Zusammenstellung zweier sich widersprechender Begriffe in einem Kompositum oder in einer rhetorischen Figur (z. B. bittersüß, eile mit Weile)',
+        'Konsens' => [
+            'Übereinstimmung der Meinungen',
+            'Zustimmung, Einwilligung',
+        ],
+        'Kausalität' => 'Ursächlichkeit',
         'Multiplikation' => 'Vervielfachung einer Zahl um eine andere',
         'Grundsatz' => [
             'feste Regel, die jemand zur Richtschnur seines Handelns macht',
