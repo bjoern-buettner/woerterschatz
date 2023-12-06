@@ -14,7 +14,8 @@ $keys = array_keys($words[$type]);
 shuffle($keys);
 
 header('Mime-Type: application/json; utf-8');
-if (rand(0, 1) === 1 && count ($keys) >= 3) {
+$case = rand(0, 2);
+if ($case === 1 && count ($keys) >= 3) {
     $question = array_pop($keys);
     $wrong1 = array_pop($keys);
     $wrong2 = array_pop($keys);
@@ -33,6 +34,20 @@ if (rand(0, 1) === 1 && count ($keys) >= 3) {
             return $words[$type][$key];
         }, $answers),
         'question' => $question,
+    ]);
+} elseif ($case === 2 && count ($keys) >= 3) {
+    $question = array_pop($keys);
+    $wrong1 = array_pop($keys);
+    $wrong2 = array_pop($keys);
+
+    $answers = [$question, $wrong2, $wrong1];
+    shuffle($answers);
+
+    echo json_encode([
+        'type' => 'multiple-choice',
+        'answer' => array_search($question, $answers),
+        'answers' => $answers,
+        'question' => is_array($words[$type][$question]) ? $words[$type][$question][rand(0, count($words[$type][$question]) - 1)] : $words[$type][$question],
     ]);
 } else {
     $answer = array_pop($keys);
