@@ -106,9 +106,9 @@
                     }
                     for (const key of Object.keys(stats)) {
                         const element = document.getElementById(key + '-meter');
-                        element.setAttribute('title', stats.correct + '/' + stats.asked);
-                        element.setAttribute('value', stats.correct);
-                        element.setAttribute('max', stats.asked);
+                        element.setAttribute('title', stats[key].correct + '/' + stats[key].asked);
+                        element.setAttribute('value', stats[key].correct);
+                        element.setAttribute('max', stats[key].asked);
                     }
                 };
                 fill();
