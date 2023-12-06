@@ -56,7 +56,7 @@
         </fieldset>
         <script>
             (() => {
-                let stats = {};
+                const stats = {};
                 const fill = async () => {
                     const data = await (await fetch('/test.php')).json();
                     document.getElementById('input').setAttribute('style', 'display: none');
@@ -104,7 +104,7 @@
                         alert('Unverständliche Aufgabe, lade neu!');
                         window.location.reload();
                     }
-                    for (const key in Object.keys(stats)) {
+                    for (const key of Object.keys(stats)) {
                         const element = document.getElementById(key + '-meter');
                         element.setAttribute('title', stats.correct + '/' + stats.asked);
                         element.setAttribute('value', stats.correct);
