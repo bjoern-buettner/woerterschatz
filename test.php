@@ -62,5 +62,3 @@ if ($case === 1 && count ($keys) >= 3) {
         'question' => $question,
     ]);
 }
-$datetime = date('Y-m-d H:i:s');
-file_put_contents(__DIR__ . '/log.txt', "$datetime {$_SERVER['REMOTE_ADDR']}\n", FILE_APPEND);
